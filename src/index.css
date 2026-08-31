@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-bg text-text font-sans antialiased;
+  margin: 0;
+}
+
+/* Тонкие скроллбары в тёмной теме */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2c313c transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #2c313c;
+  border-radius: 8px;
+}
+
+/* TipTap-редактор */
+.ProseMirror {
+  outline: none;
+  min-height: 60px;
+}
+.ProseMirror p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  @apply text-faint;
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+.ProseMirror a {
+  @apply text-accent underline;
+}
+.ProseMirror ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+}
+.ProseMirror ol {
+  list-style: decimal;
+  padding-left: 1.2rem;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-1.5 rounded-lg px-2.5 py-1.5 text-sm
+      text-muted hover:text-text hover:bg-surface-3 transition-colors;
+  }
+  .btn-accent {
+    @apply bg-accent text-white hover:bg-accent/90 hover:text-white;
+  }
+  .icon-btn {
+    @apply inline-flex h-8 w-8 items-center justify-center rounded-lg text-muted
+      hover:text-text hover:bg-surface-3 transition-colors;
+  }
+  .input {
+    @apply w-full bg-transparent outline-none placeholder:text-faint;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs;
+  }
+}

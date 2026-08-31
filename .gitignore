@@ -1,0 +1,6 @@
+node_modules
+dist
+tsconfig.tsbuildinfo
+bot/node_modules
+bot/.env
+.env
