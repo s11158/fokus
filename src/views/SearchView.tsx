@@ -24,7 +24,7 @@ export function SearchView() {
   return (
     <ViewShell>
       <div className="mb-2 px-2 text-sm text-faint">
-        Результаты поиска: «{search}» — {tasks?.length ?? 0}
+        Результаты поиска: «{search}» - {tasks?.length ?? 0}
       </div>
       {tasks && tasks.length === 0 ? (
         <EmptyState text="Ничего не найдено." />

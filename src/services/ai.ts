@@ -73,8 +73,8 @@ class AnthropicProvider implements AIProvider {
     const projectList = ctx.projects.map((p) => `- ${p.title} (id: ${p.id})`).join('\n') || '(нет проектов)'
     const prompt =
       `Сегодня ${ctx.today}. Разбери заметку в задачу по методологии GTD. ` +
-      `Если в тексте есть относительная дата (завтра, в пятницу, через неделю) — переведи в конкретную ISO-дату. ` +
-      `Подбери подходящий проект из списка по смыслу (или null). Существующие теги: ${ctx.tags.join(', ') || '—'}.\n\n` +
+      `Если в тексте есть относительная дата (завтра, в пятницу, через неделю) - переведи в конкретную ISO-дату. ` +
+      `Подбери подходящий проект из списка по смыслу (или null). Существующие теги: ${ctx.tags.join(', ') || '-'}.\n\n` +
       `Проекты:\n${projectList}\n\nЗаметка:\n"""${text}"""`
 
     const res = await fetch(`${this.s.baseUrl || DEFAULT_AI.baseUrl}/v1/messages`, {
@@ -111,6 +111,6 @@ export function makeProvider(s: AISettings): AIProvider {
 
 export async function parseCapture(text: string, ctx: CaptureContext): Promise<ParsedCapture> {
   const s = await loadAISettings()
-  if (!s.apiKey) throw new Error('Не задан API-ключ. Откройте Настройки → AI.')
+  if (!s.apiKey) throw new Error('Не задан API-ключ. Откройте Настройки, раздел AI.')
   return makeProvider(s).parse(text, ctx)
 }

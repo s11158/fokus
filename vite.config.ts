@@ -10,7 +10,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.png'],
       manifest: {
-        name: 'Фокус — задачи',
+        name: 'Фокус - задачи',
         short_name: 'Фокус',
         description: 'Личный таск-менеджер по методологии GTD. Offline-first.',
         lang: 'ru',

@@ -1,5 +1,5 @@
 // Синхронизация с внешним источником через TaskConnector.
-// Стратегия конфликтов — last-write-wins по modifiedDate.
+// Стратегия конфликтов - last-write-wins по modifiedDate.
 import { db } from '../db/db'
 import { setTaskChangeHandler } from '../db/repo'
 import { SingularityConnector } from './singularityConnector'

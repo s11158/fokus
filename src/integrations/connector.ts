@@ -15,7 +15,7 @@ export interface ConnectorConfig {
 }
 
 export const DEFAULT_CONNECTOR: ConnectorConfig = {
-  // НЕ хардкодим конкретный адрес — пользователь вписывает из официальной документации API.
+  // НЕ хардкодим конкретный адрес - пользователь вписывает из официальной документации API.
   apiBaseUrl: '',
   apiToken: '',
   syncEnabled: false,

@@ -26,7 +26,7 @@ export function sortTasks(tasks: Task[], sort: SortSpec): Task[] {
   return arr
 }
 
-// «Умная» сортировка: просроченные → дедлайн скоро → приоритет → дата старта.
+// «Умная» сортировка: просроченные, затем дедлайн скоро, затем приоритет, затем дата старта.
 function smartScoreCmp(a: Task, b: Task): number {
   return score(a) - score(b)
 }

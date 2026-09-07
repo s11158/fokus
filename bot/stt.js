@@ -1,6 +1,6 @@
-// Распознавание речи (STT) — заменяемый модуль.
+// Распознавание речи (STT) - заменяемый модуль.
 // По умолчанию поддержан OpenAI-совместимый Whisper-эндпоинт (настраивается через .env).
-// Чтобы подключить другой провайдер — реализуйте transcribe(buffer, mime) здесь.
+// Чтобы подключить другой провайдер - реализуйте transcribe(buffer, mime) здесь.
 
 export async function transcribe(audioBuffer, mime = 'audio/ogg') {
   const url = process.env.STT_API_URL // напр. https://api.openai.com/v1/audio/transcriptions

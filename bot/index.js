@@ -1,7 +1,7 @@
 // Telegram-бот захвата для «Фокуса».
 // Принимает текст/голос -> AI-разбор -> кладёт в очередь моста.
 // Команды: /inbox, /today (из снимка, который пушит приложение).
-// Токен и ключи — только из .env (см. .env.example). Ничего не хардкодим.
+// Токен и ключи - только из .env (см. .env.example). Ничего не хардкодим.
 import 'dotenv/config'
 import { Bot } from 'grammy'
 import { parseTask } from './ai.js'
@@ -30,7 +30,7 @@ const fmtTask = (t) => {
 }
 
 bot.command('start', (ctx) =>
-  ctx.reply('Привет! Пришлите задачу текстом или голосом — я разберу её и положу в Inbox «Фокуса».\nКоманды: /inbox, /today'),
+  ctx.reply('Привет! Пришлите задачу текстом или голосом - я разберу её и положу в Inbox «Фокуса».\nКоманды: /inbox, /today'),
 )
 
 bot.command('inbox', async (ctx) => {

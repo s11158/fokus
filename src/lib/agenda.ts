@@ -2,7 +2,7 @@ import type { Task, CalendarEvent } from '../db/types'
 import { startOfDay } from './date'
 
 // День, к которому относится задача в планировщике/календаре:
-// приоритет у даты старта, иначе — дедлайн.
+// приоритет у даты старта, иначе - дедлайн.
 export function taskDayTs(t: Task): number | null {
   if (t.start != null) return startOfDay(new Date(t.start)).getTime()
   if (t.deadline != null) return startOfDay(new Date(t.deadline)).getTime()

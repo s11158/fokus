@@ -1,6 +1,6 @@
 // Локальный HTTP-мост между Telegram-ботом и веб-приложением.
 // Приложение опрашивает /captures и импортирует их в Inbox, затем /captures/ack.
-// Приложение пушит снимок задач в /snapshot — бот отвечает на /inbox и /today.
+// Приложение пушит снимок задач в /snapshot - бот отвечает на /inbox и /today.
 import { createServer } from 'node:http'
 import { addCapture, listCaptures, ackCaptures, setSnapshot, getSnapshot } from './store.js'
 

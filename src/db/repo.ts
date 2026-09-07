@@ -50,7 +50,7 @@ export async function updateProject(id: string, patch: Partial<Project>) {
 }
 
 export async function removeProject(id: string) {
-  // Мягкое удаление проекта и его задач — в корзину.
+  // Мягкое удаление проекта и его задач - в корзину.
   await db.transaction('rw', db.projects, db.tasks, async () => {
     await db.projects.update(id, { removed: true, modifiedDate: now() })
     const tasks = await db.tasks.where('projectId').equals(id).toArray()

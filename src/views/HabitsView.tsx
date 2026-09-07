@@ -13,7 +13,7 @@ export function HabitsView() {
   const habits = useLiveQuery(() => db.habits.filter((h) => !h.archived).toArray(), [])
   const progress = useLiveQuery(() => db.habitProgress.toArray(), [])
 
-  // Последние 7 дней (старое → новое).
+  // Последние 7 дней (старое, затем новое).
   const days = useMemo(
     () => Array.from({ length: 7 }, (_, i) => startOfDay(addDays(new Date(), i - 6))),
     [],
@@ -40,7 +40,7 @@ export function HabitsView() {
       </div>
 
       {sorted.length === 0 ? (
-        <EmptyState text="Пока нет привычек. Добавьте первую — например, «Зарядка» или «Чтение»." />
+        <EmptyState text="Пока нет привычек. Добавьте первую - например, «Зарядка» или «Чтение»." />
       ) : (
         <div className="flex flex-col gap-2">
           {sorted.map((h) => {

@@ -118,7 +118,7 @@ export function PlannerView() {
                     {list.length > 0 && <span className="text-xs text-faint">{list.filter((t) => !t.complete).length}</span>}
                   </div>
                   {list.length === 0 ? (
-                    <div className="px-2 py-1 text-xs text-faint">—</div>
+                    <div className="px-2 py-1 text-xs text-faint">-</div>
                   ) : (
                     <FlatList tasks={sortTasks(list, sort)} tagsById={tagsById} projectsById={projectsById} checklistCounts={checklistCounts} sort={sort} />
                   )}

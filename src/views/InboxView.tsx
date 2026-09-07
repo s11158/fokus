@@ -20,7 +20,7 @@ export function InboxView() {
   return (
     <ViewShell composer={<TaskComposer projectId={null} />}>
       {tasks && tasks.length === 0 ? (
-        <EmptyState text="Входящие пусты. Быстро запишите всё, что в голове — разберёте позже." />
+        <EmptyState text="Входящие пусты. Быстро запишите всё, что в голове - разберёте позже." />
       ) : (
         <FlatList
           tasks={tasks ?? []}

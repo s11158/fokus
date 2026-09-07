@@ -65,7 +65,7 @@ export function mapProjectRecord(p: Any, notes: Map<string, string>): Project {
 export interface TaskMapResult { task: Task; hadRecurrence: boolean; reminderCount: number }
 
 export function mapTaskRecord(t: Any, notes: Map<string, string>): TaskMapResult {
-  // Выполненность — поле complete (а не checked, см. разбор экспорта).
+  // Выполненность - поле complete (а не checked, см. разбор экспорта).
   const done = bool(t.complete)
   const start = toMs(t.start)
 

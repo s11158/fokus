@@ -10,7 +10,7 @@ export function isScheduled(habit: Habit, date: Date): boolean {
 export function computeStreak(habit: Habit, doneDates: Set<string>): number {
   let streak = 0
   let cursor = new Date()
-  // Если сегодня запланировано, но ещё не сделано — серия считается со вчера.
+  // Если сегодня запланировано, но ещё не сделано - серия считается со вчера.
   if (isScheduled(habit, cursor) && !doneDates.has(todayKey(cursor))) {
     cursor = addDays(cursor, -1)
   }

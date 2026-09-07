@@ -118,7 +118,7 @@ export function TaskDetail({ taskId }: { taskId: string }) {
                 )}
               >
                 <Flag size={13} className={['text-faint', 'text-sky-400', 'text-amber-400', 'text-rose-400'][p]} />
-                {p === 0 ? '—' : p}
+                {p === 0 ? '-' : p}
               </button>
             ))}
             <button
@@ -170,7 +170,7 @@ export function TaskDetail({ taskId }: { taskId: string }) {
           <Label><span className="inline-flex items-center gap-1.5"><Repeat size={12} /> Повтор</span></Label>
           <RecurrencePicker value={task.recurrence} onChange={(r) => setRecurrence(task.id, r)} />
           {task.recurrence && (task.start == null && task.deadline == null) && (
-            <p className="mt-1.5 text-xs text-amber-300/80">Укажите дату начала или дедлайн — повтор перекатывается от неё.</p>
+            <p className="mt-1.5 text-xs text-amber-300/80">Укажите дату начала или дедлайн - повтор перекатывается от неё.</p>
           )}
         </Section>
 

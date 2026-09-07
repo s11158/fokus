@@ -20,7 +20,7 @@ export function SomedayView() {
   return (
     <ViewShell composer={<TaskComposer deferred />}>
       {tasks && tasks.length === 0 ? (
-        <EmptyState text="«Когда-нибудь» — для идей и задач без даты. Пока пусто." />
+        <EmptyState text="«Когда-нибудь» - для идей и задач без даты. Пока пусто." />
       ) : (
         <FlatList
           tasks={tasks ?? []}

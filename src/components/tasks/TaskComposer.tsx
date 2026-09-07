@@ -61,7 +61,7 @@ export function TaskComposer({ projectId = null, deferred = false, defaultStart 
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           onKeyDown={(e) => { if (e.key === 'Enter') submit() }}
-          placeholder="Новая задача… (Enter — добавить)"
+          placeholder="Новая задача… (Enter - добавить)"
           className="input text-sm"
         />
 

@@ -1,5 +1,5 @@
 // Разбор текста заметки в задачу через Anthropic (тот же подход, что в приложении).
-// Ключ — только из переменных окружения.
+// Ключ - только из переменных окружения.
 
 const TASK_TOOL = {
   name: 'create_task',
@@ -22,7 +22,7 @@ const TASK_TOOL = {
 export async function parseTask(text) {
   const apiKey = process.env.ANTHROPIC_API_KEY
   const model = process.env.ANTHROPIC_MODEL || 'claude-haiku-4-5-20251001'
-  // Без ключа — деградация до «сырого» захвата (заголовок = текст).
+  // Без ключа - деградация до «сырого» захвата (заголовок = текст).
   if (!apiKey) return { title: text.trim(), tags: [], subtasks: [] }
 
   const today = new Date().toISOString().slice(0, 10)

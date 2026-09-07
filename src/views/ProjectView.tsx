@@ -66,7 +66,7 @@ export function ProjectView({ projectId }: { projectId: string }) {
     }
   }
 
-  // Канбан — на всю ширину.
+  // Канбан - на всю ширину.
   if (projectMode === 'kanban') {
     return (
       <div className="flex h-full flex-col">

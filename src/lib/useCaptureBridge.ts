@@ -18,7 +18,7 @@ export function useCaptureBridge() {
     let stopped = false
     const tick = async () => {
       if (stopped) return
-      try { await syncBridgeOnce(url) } catch { /* мост недоступен — молча ждём */ }
+      try { await syncBridgeOnce(url) } catch { /* мост недоступен - молча ждём */ }
     }
     tick()
     const id = setInterval(tick, 8000)

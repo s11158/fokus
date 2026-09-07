@@ -11,7 +11,7 @@ import { todayKey } from '../../lib/date'
 import { cn } from '../../lib/cn'
 import type { Priority } from '../../db/types'
 
-const PRIORITY_LABEL = ['—', 'Низкий', 'Средний', 'Высокий']
+const PRIORITY_LABEL = ['-', 'Низкий', 'Средний', 'Высокий']
 
 export function QuickCapture() {
   const { open, setOpen } = useCapture()
@@ -136,7 +136,7 @@ export function QuickCapture() {
                 Разобрать с AI
               </button>
             </div>
-            <p className="mt-2 text-xs text-faint">Ctrl/⌘ + Enter — разобрать. AI-ключ хранится только на этом устройстве.</p>
+            <p className="mt-2 text-xs text-faint">Ctrl/⌘ + Enter - разобрать. AI-ключ хранится только на этом устройстве.</p>
           </div>
         )}
 

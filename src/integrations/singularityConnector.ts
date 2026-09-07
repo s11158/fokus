@@ -1,5 +1,5 @@
 // Коннектор к SingularityApp по HTTP API.
-// ВАЖНО: точные адреса эндпоинтов НЕ зафиксированы — их нужно взять из официальной
+// ВАЖНО: точные адреса эндпоинтов НЕ зафиксированы - их нужно взять из официальной
 // документации API SingularityApp. Здесь они вынесены в константы с пометкой TODO,
 // а базовый адрес (apiBaseUrl) и токен задаются пользователем в настройках.
 import type { Task } from '../db/types'
@@ -27,7 +27,7 @@ export class SingularityConnector implements TaskConnector {
   private headers(): HeadersInit {
     return {
       'content-type': 'application/json',
-      // Авторизация по токену (Bearer). Точная схема — см. документацию.
+      // Авторизация по токену (Bearer). Точная схема - см. документацию.
       authorization: `Bearer ${this.apiToken}`,
     }
   }
@@ -67,7 +67,7 @@ export class SingularityConnector implements TaskConnector {
   }
 
   async createTask(task: Task): Promise<{ externalId: string }> {
-    // Маппинг нашей модели обратно во внешнюю. Поля — по документации API.
+    // Маппинг нашей модели обратно во внешнюю. Поля - по документации API.
     const payload = {
       title: task.title,
       note: task.note,

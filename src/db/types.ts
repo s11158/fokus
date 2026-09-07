@@ -3,7 +3,7 @@
 
 export type ID = string
 
-export type Priority = 0 | 1 | 2 | 3 // 0 — нет, 1 — низкий, 2 — средний, 3 — высокий
+export type Priority = 0 | 1 | 2 | 3 // 0 - нет, 1 - низкий, 2 - средний, 3 - высокий
 export type TaskState = 'active' | 'done' | 'someday'
 
 export interface Project {

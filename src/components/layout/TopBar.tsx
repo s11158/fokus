@@ -88,13 +88,13 @@ export function TopBar() {
               )}
             >
               {s.label}
-              {sort.field === s.field && <span className="text-xs">{sort.reverse ? '↑' : '↓'}</span>}
+              {sort.field === s.field && <span className="text-xs">{sort.reverse ? '▲' : '▼'}</span>}
             </button>
           ))}
         </div>
       </div>
 
-      {/* Переключатель список/канбан — только в проекте */}
+      {/* Переключатель список/канбан - только в проекте */}
       {view.kind === 'project' && (
         <div className="flex rounded-lg bg-surface-2 p-0.5">
           <button

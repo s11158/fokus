@@ -137,7 +137,7 @@ export function SettingsView() {
       </Section>
 
       <Section icon={<Database size={16} />} title="Данные (privacy-first)">
-        <p className="mb-2 text-xs text-faint">Все данные хранятся только на этом устройстве (IndexedDB). Бэкап — обычный JSON-файл.</p>
+        <p className="mb-2 text-xs text-faint">Все данные хранятся только на этом устройстве (IndexedDB). Бэкап - обычный JSON-файл.</p>
         <div className="flex flex-wrap gap-2">
           <button className="btn bg-surface-3 text-text" onClick={exportData}><Download size={15} /> Экспорт бэкапа</button>
           <button className="btn bg-surface-3 text-text" onClick={() => fileRef.current?.click()}><Upload size={15} /> Импорт бэкапа</button>
@@ -166,7 +166,7 @@ export function SettingsView() {
               className="input rounded-lg bg-surface-2 px-2.5 py-1.5 text-sm"
             />
             <span className={ai.apiKey ? 'text-xs text-emerald-400' : 'text-xs text-faint'}>
-              {ai.apiKey ? 'Ключ задан ✓ — захват с AI доступен' : 'Ключ не задан — доступен только захват «в Inbox»'}
+              {ai.apiKey ? 'Ключ задан ✓ - захват с AI доступен' : 'Ключ не задан - доступен только захват «в Inbox»'}
             </span>
           </div>
         )}
@@ -174,7 +174,7 @@ export function SettingsView() {
 
       <Section icon={<Plug size={16} />} title="Интеграции · SingularityApp (API)">
         <p className="mb-2 text-xs text-faint">
-          Двусторонняя синхронизация по API. Адрес и токен — из вашего личного кабинета и официальной
+          Двусторонняя синхронизация по API. Адрес и токен - из вашего личного кабинета и официальной
           документации SingularityApp. Токен хранится <b>только на этом устройстве</b>.
         </p>
         {conn && (
@@ -195,7 +195,7 @@ export function SettingsView() {
             </label>
             <label className="flex items-center gap-2 text-sm">
               <input type="checkbox" checked={conn.pushOnChange} onChange={(e) => updConn({ pushOnChange: e.target.checked })} />
-              Отправлять изменения сразу (иначе — по кнопке «Синхронизировать»)
+              Отправлять изменения сразу (иначе - по кнопке «Синхронизировать»)
             </label>
             <div className="flex flex-wrap gap-2">
               <button className="btn bg-surface-3 text-text" disabled={connBusy} onClick={connTest}>Проверить подключение</button>
@@ -231,7 +231,7 @@ export function SettingsView() {
               </button>
             </div>
             {bridgeStatus === 'ok' && <span className="text-xs text-emerald-400">Мост доступен ✓</span>}
-            {bridgeStatus === 'fail' && <span className="text-xs text-rose-300">Мост недоступен — запущен ли бот?</span>}
+            {bridgeStatus === 'fail' && <span className="text-xs text-rose-300">Мост недоступен - запущен ли бот?</span>}
           </div>
         )}
       </Section>
@@ -269,7 +269,7 @@ export function SettingsView() {
       </Section>
 
       <Section icon={<Info size={16} />} title="О приложении">
-        <p className="text-sm text-muted">«Фокус» — личный таск-менеджер по методологии GTD. Offline-first PWA.</p>
+        <p className="text-sm text-muted">«Фокус» - личный таск-менеджер по методологии GTD. Offline-first PWA.</p>
         <p className="mt-1 text-xs text-faint">Локальное хранилище · тёмная тема · клавиатурно-дружелюбно.</p>
       </Section>
 
